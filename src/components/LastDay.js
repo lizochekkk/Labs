@@ -7,7 +7,7 @@ const LastDay=(props)=>{
             return(<tr><td>29</td> <td> 30 </td> <td> 31 </td></tr>)
            
         case 1:
-            if (year % 4 === 0 || (year % 100 !== 0 || year % 400 === 0))
+            if (year % 4 === 0 || (year % 100 !== 0 || year % 400 === 0))//Високосный год
             return(<tr><td>29</td></tr>)
             else 
             return('')
