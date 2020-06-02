@@ -2,15 +2,16 @@ import React from 'react';
 const LastDay=(props)=>{
     
     const year = props.year || new Date().getFullYear();
-    switch (new Date().getMonth())  {
+    const month = props.month || new Date().getMonth()
+    switch (month)  {
         case 0:
             return(<tr><td>29</td> <td> 30 </td> <td> 31 </td></tr>)
            
         case 1:
-            if (year % 4 === 0 || (year % 100 !== 0 || year % 400 === 0))//Високосный год
-            return(<tr><td>29</td></tr>)
+            if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0))//Високосный год
+                return(<tr><td>29</td></tr>)
             else 
-            return('')
+                return('')
            
         case 2:
             return(<tr><td>29</td> <td> 30 </td> <td> 31 </td></tr>)
