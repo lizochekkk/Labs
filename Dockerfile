@@ -1,4 +1,5 @@
 FROM tiangolo/node-frontend:latest as build-stage
+
 WORKDIR /app
 
 COPY package.json package-lock.json ./
